@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: pt.webdetails.cda.connections.DummyConnectionTest
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.478 sec - in pt.webdetails.cda.connections.DummyConnectionTest
