@@ -13,11 +13,7 @@
 
 package pt.webdetails.cda;
 
-import java.util.Locale;
-import java.util.TimeZone;
-
 import org.pentaho.platform.util.messages.LocaleHelper;
-
 import org.pentaho.reporting.engine.classic.core.DataFactory;
 import org.pentaho.reporting.engine.classic.core.DataFactoryContext;
 import org.pentaho.reporting.engine.classic.core.ReportDataFactoryException;
@@ -27,6 +23,9 @@ import org.pentaho.reporting.libraries.base.config.Configuration;
 import org.pentaho.reporting.libraries.formula.FormulaContext;
 import org.pentaho.reporting.libraries.resourceloader.ResourceKey;
 import org.pentaho.reporting.libraries.resourceloader.ResourceManager;
+
+import java.util.Locale;
+import java.util.TimeZone;
 
 public class PentahoCdaEnvironment extends PentahoBaseCdaEnvironment implements ICdaEnvironment {
 

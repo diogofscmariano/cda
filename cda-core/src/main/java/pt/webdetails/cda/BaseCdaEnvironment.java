@@ -68,7 +68,7 @@ public abstract class BaseCdaEnvironment implements ICdaEnvironment {
 		init();
 	}
 	
-	public BaseCdaEnvironment(IBeanFactory factory) throws InitializationException {
+	public BaseCdaEnvironment( IBeanFactory factory ) throws InitializationException {
 		init(factory);
 	}
 
