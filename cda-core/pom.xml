@@ -216,6 +216,24 @@
   <build>
     <plugins>
       <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>${dependency.maven-assembly-plugin.revision}</version>
+        <executions>
+          <execution>
+            <id>assembly-sources</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>${project.basedir}/src/assembly/assembly.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>${plugin.org.apache.maven.plugins.maven-failsafe-plugin.version}</version>
         <executions>

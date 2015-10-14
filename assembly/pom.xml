@@ -59,6 +59,23 @@
               <supportMultiLineFiltering>false</supportMultiLineFiltering>
             </configuration>
           </execution>
+          <execution>
+            <id>copy-assembly-resources</id>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <overwrite>true</overwrite>
+              <outputDirectory>${basedir}/target/</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${basedir}/src/main/resources</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
       <plugin>
@@ -75,6 +92,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
+        <version>${dependency.maven-assembly-plugin.revision}</version>
         <executions>
           <execution>
             <id>cda</id>
@@ -87,15 +105,22 @@
                 <descriptor>src/assembly/assembly.xml</descriptor>
               </descriptors>
               <finalName>${parent.artifactId}-${project.revision}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
+              <appendAssemblyId>false</appendAssemblyId>
             </configuration>
           </execution>
-          <!--<execution>
+          <execution>
             <id>cda-disabled</id>
             <phase>package</phase>
             <goals>
               <goal>single</goal>
             </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/assembly/assembly.disabled.xml</descriptor>
+              </descriptors>
+              <finalName>${parent.artifactId}-disabled-${project.revision}</finalName>
+              <appendAssemblyId>false</appendAssemblyId>
+            </configuration>
           </execution>
           <execution>
             <id>cda-samples</id>
@@ -104,18 +129,22 @@
               <goal>single</goal>
             </goals>
             <configuration>
-              <descriptor>
-
-              </descriptor>
+              <descriptor>src/assembly/assembly.samples.xml</descriptor>
+              <finalName>cda-samples-${project.revision}</finalName>
+              <appendAssemblyId>false</appendAssemblyId>
             </configuration>
           </execution>
-          <execution>
+          <!--<execution>
             <id>cda-marketplace-xml</id>
             <phase>package</phase>
             <goals>
               <goal>single</goal>
             </goals>
-          </execution>  -->
+            <configuration>
+              <descriptor>src/assembly/assembly.marketplace.xml</descriptor>
+              <finalName>marketplace.xml</finalName>
+            </configuration>
+          </execution> -->
         </executions>
       </plugin>
     </plugins>

@@ -47,9 +47,19 @@
 
     <dependency.maven-resources-plugin.revision>2.7</dependency.maven-resources-plugin.revision>
     <dependency.maven-clean-plugin.revision>2.5</dependency.maven-clean-plugin.revision>
+    <dependency.maven-assembly-plugin.revision>2.4</dependency.maven-assembly-plugin.revision>
 
+    <!-- marketplace.xml properties -->
     <marketplace.metadata.development_stage.lane>Customer</marketplace.metadata.development_stage.lane>
     <marketplace.metadata.development_stage.phase>2</marketplace.metadata.development_stage.phase>
+    <marketplace.metadata.name></marketplace.metadata.name>
+    <marketplace.metadata.min_parent_version></marketplace.metadata.min_parent_version>
+    <marketplace.metadata.samples_url></marketplace.metadata.samples_url>
+    <marketplace.metadata.description></marketplace.metadata.description>
+    <marketplace.metadata.package_url></marketplace.metadata.package_url>
+
+    <!-- version.xml properties -->
+    <sequential.build.id></sequential.build.id>
   </properties>
 
   <dependencies>
